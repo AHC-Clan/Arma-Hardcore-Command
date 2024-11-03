@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="PHAHC">
+    <Package name="AHC">
+        <Key ID="STR_MISSION_VERSION">
+            <English>24.11.03</English>
+        </Key>        
+        <Key ID="STR_MISSION_MAKER">
+            <English>Patch</English>
+        </Key>
+    </Package>
+</Project>

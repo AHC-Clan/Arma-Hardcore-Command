@@ -1,0 +1,35 @@
+class Header
+{
+	gameType = "Coop";
+	minPlayers = 1;
+	maxPlayers = 100;
+};
+
+// 미션 정보
+onLoadName 						= "AHC";
+onLoadMission                   = "AHC - Arma3 Hardcore Command";
+author 							= "Patch";
+loadScreen 						= "image\ahc_logo.jpg";
+
+// 미션 설정
+onLoadMissionsTime 				= false;
+allowFunctionsLog 				= 0;
+enableDebugConsole				= 1;
+DisabledAI						= 1;
+joinUnassigned					= 1;
+saving 							= 0;
+
+// 리스폰 설정
+Respawn 						= "BASE";
+RespawnDelay					= 1;
+respawnVehicleDelay             = 60;
+RespawnDialog 					= 0;
+
+// HUD 설정
+showGPS							= 0;
+showCompass						= 1;
+showMap							= 1;
+showWatch						= 1;
+
+// 시뮬레이션 설정
+forceRotorLibSimulation			= 0;
