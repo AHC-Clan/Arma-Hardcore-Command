@@ -1,2 +1,3 @@
 AHC_BaseFireCount=3,
-AHC_EnableKillStatus=true
+AHC_SkipMissionVersionCheck=true,
+AHC_RespawnPoint=respawn
