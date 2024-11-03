@@ -1,2 +1,2 @@
 AHC_BaseFireCount=3,
-AHC_Status=true
+AHC_EnableKillStatus=true
