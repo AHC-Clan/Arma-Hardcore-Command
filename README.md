@@ -2,7 +2,7 @@
 # [ 샘플 처음 사용자 ]
 ---------------------------------------------------------------
 
-<img src="https://github.com/AHC-Clan/Arma-Hardcore-Command/blob/main/Sample/ahc.png"></img>
+<img src="https://github.com/AHC-Clan/Arma-Hardcore-Command/blob/main/Sample/ahc.png"></img><br/>
 AHC 미션 샘플은 Sample/[AHC]_Sample.VR.7z 파일을 받아주세요.
 
 샘플 사용 및 적용 방법은 아래 영상을 참고해 주세요.
