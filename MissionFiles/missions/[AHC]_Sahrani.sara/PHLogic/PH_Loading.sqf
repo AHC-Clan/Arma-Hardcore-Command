@@ -1,17 +1,12 @@
-
-[ 0, 1, false, true] spawn BIS_fnc_cinemaBorder; 
-sleep 1.3;
-
-playSound3D ['a3\dubbing_f_orange\orange_hub_airdrop\003_eve_door_breached\orange_hub_airdrop_003_eve_door_breached_EOD_0.ogg', player];
-[['SPEAKER', "안녕하신가. 자네 들어온 건가?", 0]] spawn BIS_fnc_EXP_camp_playSubtitles;
-
-SLEEP 0.2;
+[] execVM "PHLogic\PH_InitMission.sqf";
+sleep 3;
 
 // 초기 설정
 [] execVM "PHLogic\PH_MissionVariable.sqf";
+sleep 1;
+
 pGetDistance = viewDistance;
 pGetObjDistance = getObjectViewDistance select 0;
-// nBaseFire = 3;
 
 // 환경 설정
 setViewDistance 1;
@@ -19,24 +14,35 @@ setObjectViewDistance 1;
 removeAllWeapons player;
 removeBackpack player;
 
+enableRadio false; // 무전 비활성화
+enableSentences false; // AI 음성 비활성화
+enableEnvironment [false, true];  // 환경 효과: 일반 소리 비활성화, 바다 소리 유지
+
+// HUD 설정: 필요한 요소만 표시
+ShowHUD [
+    false, // 무기 패널
+    false, // 스탠스 인디케이터
+    true,  // 커서
+    false,  // 차량 정보
+    true,  // 방향 및 고도
+    true, // 채팅
+    false, // 팀 정보
+    false, // 명령 메뉴
+    true,  // 자막
+    false   // 그룹 정보
+];
+cutText ["", "BLACK", 0.001];
 
 // 미션 버전 정보 가져오기
 _missionVersion = "AHC_MissionVersion";
 ["https://raw.githubusercontent.com/AHC-Clan/Arma-Hardcore-Command/refs/heads/main/Mission/MissionVersion.txt", _missionVersion] execVM "PHLogic\PH_UrlReader.sqf";
 sleep 1.2;
 
-// 필수 스크립트 실행
-["PHLogic\PH_SafeZone.sqf", "PHLogic\PH_Respawn.sqf", "PHLogic\PH_Permission.sqf"] apply 
-{
-    [] execVM _x;
-    sleep 0.3;
-};
-
 // 미션 버전 확인
 _cv = localize "STR_MISSION_VERSION";
-_serverVersion = missionNamespace getVariable [_missionVersion, ""];
+_serverVersion = missionNamespace getVariable _missionVersion;
 
-if (!SkipMissionVersionCheck && !isNil "_serverVersion" && _serverVersion != _cv || isNil "_cv" ) exitWith 
+if (!SkipMissionVersionCheck && !isNil "_serverVersion" && isNil "_cv" && trim _serverVersion != trim _cv) exitWith 
 {
     systemChat format["AHC 미션 파일이 최신이 아닙니다. 'Patch'에게 문의 주세요."];
     systemChat format["현재 버전: %1 | 최신버전: %2", _cv, _serverVersion];
@@ -45,6 +51,17 @@ if (!SkipMissionVersionCheck && !isNil "_serverVersion" && _serverVersion != _cv
         localize "STR_MISSION_VERSION",
         _serverVersion],
         [1,1,10,10], nil, 9999, 1, 0] spawn BIS_fnc_textTiles;
+};
+
+sleep 0.1;
+
+playMusic "EventTrack02_F_Orange";
+
+// 필수 스크립트 실행
+["PHLogic\PH_SafeZone.sqf", "PHLogic\PH_Respawn.sqf", "PHLogic\PH_Permission.sqf"] apply 
+{
+    [] execVM _x;
+    sleep 0.3;
 };
 
 // 해상도별 텍스트 위치 설정
@@ -73,6 +90,7 @@ switch ( _resFactor ) do
     };    
 };
 
+[ 0, 0, false, true] spawn BIS_fnc_cinemaBorder; 
 sleep 0.1;
 
 // 인트로 텍스트 출력
@@ -97,6 +115,7 @@ if ( !isNil "RespawnPoint") then
 }
 else
 {
+    player setPosASL(getPosASL respawn); 
     systemChat "리스폰 지점을 찾을 수 없습니다.";
 };
 

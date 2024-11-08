@@ -1,0 +1,29 @@
+class Header
+{
+	gameType = "Coop";
+	minPlayers = 1;
+	maxPlayers = 100;
+};
+
+onLoadName 						= "AHC ETP";
+author 							= "Patch, AKASHI";
+onLoadMission 					= "ETP - 교육(Education), 훈련(Training), 연습(Practice)";				
+loadScreen 						= "image\logo.jpg";
+
+onLoadMissionsTime 				= false;
+allowFunctionsLog 				= 0;
+enableDebugConsole				= 1;
+DisabledAI						= 1;
+joinUnassigned					= 1;
+saving 							= 0;
+
+Respawn 						= "BASE";
+RespawnDelay					= 1;
+RespawnDialog 					= 0;
+respawnVehicleDelay             = 10;
+
+showGPS							= 0;
+showCompass						= 1;
+showMap							= 1;
+showWatch						= 1;
+forceRotorLibSimulation			= 0;
