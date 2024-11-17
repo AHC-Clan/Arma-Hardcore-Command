@@ -11,7 +11,7 @@ beraredi@임시클랜원, 기본교육\n
 HISBUST@정식클랜원, 기본교육\n
 samryong@정식클랜원, 기본교육\n
 NEST@정식클랜원, 기본교육\n
-Starnight@정식클랜원\n
-chocoba@정식클랜원, 11월 서버 후원자\n
-luffy@임시클랜원\n
+Starnight@정식클랜원, (기본교육 대상자)\n
+chocoba@정식클랜원, (기본교육 대상자), 11월 서버 후원자\n
+luffy@임시클랜원, (기본교육 대상자)\n
 DarkWing@임시클랜원, 기본교육\n
