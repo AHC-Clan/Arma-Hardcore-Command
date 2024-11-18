@@ -7,7 +7,7 @@ private _permissionURL = "https://raw.githubusercontent.com/AHC-Clan/Arma-Hardco
 private _permissionVar = "AHC_Permission";
 
 [_permissionURL, _permissionVar] execVM "PHLogic\PH_UrlReader.sqf"; 
-sleep 1.5;
+waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 _permission = (missionnamespace getVariable _permissionVar);
 _userList = [_permission, 0] call BIS_fnc_trimString splitString "@,";

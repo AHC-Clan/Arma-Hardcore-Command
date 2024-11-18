@@ -24,4 +24,6 @@ if ( !isNil "AHC_SettingMap") then
             };
         };    
     } forEach AHC_SettingMap;
+
+    missionNamespace setVariable ["AHC_MissionVar_Ready", true];
 };

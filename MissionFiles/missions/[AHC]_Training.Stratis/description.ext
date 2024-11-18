@@ -5,11 +5,13 @@ class Header
 	maxPlayers = 100;
 };
 
-onLoadName 						= "AHC ETP";
-author 							= "Patch, AKASHI";
-onLoadMission 					= "ETP - 교육(Education), 훈련(Training), 연습(Practice)";				
-loadScreen 						= "image\logo.jpg";
+// 미션 정보
+onLoadName 						= "AHC";
+onLoadMission                   = "AHC - Arma3 Hardcore Command";
+author 							= "Patch";
+loadScreen 						= "image\ahc_logo.jpg";
 
+// 미션 설정
 onLoadMissionsTime 				= false;
 allowFunctionsLog 				= 0;
 enableDebugConsole				= 1;
@@ -17,13 +19,55 @@ DisabledAI						= 1;
 joinUnassigned					= 1;
 saving 							= 0;
 
+// 리스폰 설정
 Respawn 						= "BASE";
 RespawnDelay					= 1;
+respawnVehicleDelay             = 60;
 RespawnDialog 					= 0;
-respawnVehicleDelay             = 10;
 
+// HUD 설정
 showGPS							= 0;
 showCompass						= 1;
 showMap							= 1;
 showWatch						= 1;
+
+// 시뮬레이션 설정
 forceRotorLibSimulation			= 0;
+
+
+minPlayerDistance = 10;  //-- Garbage collector despawn distance
+
+corpseManagerMode = 1;  //-- 1: All, 2: Players, 3: All but players
+corpseLimit = 30;
+corpseRemovalMinTime = 60; 
+corpseRemovalMaxTime = 120;
+
+wreckManagerMode = 3;  //-- 1: All, 2: Players, 3: All but players
+wreckLimit = 15;
+wreckRemovalMinTime = 300; 
+wreckRemovalMaxTime = 600;
+
+loadScreen = "image\ahc.paa";
+
+debriefing = 1;
+class CfgDebriefing
+{
+	class Lose
+	{
+		title = "임무 실패";
+        subtitle = "디브리핑 준비해주세요..";
+        description = "모두 고생하셨습니다. 완료 버튼까지 눌러야지 AHC 계정 데이터가 저장됩니다.";
+        pictureBackground = "image\ahc.paa";
+        picture = "image\ahc.paa";
+        pictureColor[] = {0.0, 0.3, 0.6, 1};
+	};
+    class End1
+    {
+        title = "임무 완수";
+        subtitle = "디브리핑 준비해주세요.";
+        description = "모두 고생하셨습니다. 완료 버튼까지 눌러야지 AHC 계정 데이터가 저장됩니다.";
+        pictureBackground = "image\ahc.paa";
+        picture = "image\ahc.paa";
+        pictureColor[] = {0.0, 0.3, 0.6, 1};
+    };
+};

@@ -3,6 +3,8 @@ private ["_result", "_last"];
 _result = _this select 0;
 _last = _this select 1;
 
+missionNamespace setVariable ["AHC_URL_READY", false];
+
 // 데이터 요청이 완료될 때까지 대기
 waitUntil 
 {
@@ -40,3 +42,4 @@ if (_result == "ERROR") exitWith
 
 // 결과를 미션 네임스페이스에 저장
 missionNamespace setVariable [_last, _result];
+missionNamespace setVariable ["AHC_URL_READY", true];

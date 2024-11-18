@@ -54,9 +54,14 @@ PH_MOVE = {
     [ph_area2] spawn PH_Move;
 }, { }, [], 0.3, 0, false, true] call BIS_fnc_holdActionAdd;
 
-[_obj, "<t color='#60994a'>MOUT, CQB 교장</t>", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "true", "true", {}, {}, 
+[_obj, "<t color='#60994a'>MOUT 교장</t>", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "true", "true", {}, {}, 
 {
     [ph_area3] spawn PH_Move;
+}, { }, [], 0.3, 0, false, true] call BIS_fnc_holdActionAdd;
+
+[_obj, "<t color='#60994a'>CQC 교장</t>", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "true", "true", {}, {}, 
+{
+    [ph_area5] spawn PH_Move;
 }, { }, [], 0.3, 0, false, true] call BIS_fnc_holdActionAdd;
 
 [_obj, "<t color='#555555'>----------</t>", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", "true", "true", {}, {}, 

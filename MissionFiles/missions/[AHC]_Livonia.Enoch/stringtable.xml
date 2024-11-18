@@ -2,13 +2,13 @@
 <Project name="PHAHC">
     <Package name="AHC">
         <Key ID="STR_MISSION_VERSION">
-            <English>24.11.09</English>
+            <English>24.11.18</English>
         </Key>
         <Key ID="STR_MISSION_MAKER">
             <English>Patch</English>
         </Key>
         <Key ID="STR_MISSION_LOAD">
-            <English>AHC 미션 로드중...</English>
+            <English>AHC 정보 불러오는 중</English>
         </Key>
     </Package>
 </Project>

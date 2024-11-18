@@ -16,10 +16,13 @@ player addEventHandler ["Respawn",
 		// 플레이어 위치 설정 (리스폰 확인)
 		if ( !isNil "RespawnPoint") then
 		{
+    		player setDir (direction RespawnPoint);
 			player setPosASL(getPosASL RespawnPoint); 
 		}
 		else
 		{
+			player setDir (direction respawn);
+    		player setPosASL (getPosASL respawn); 
 			systemChat "리스폰 지점을 찾을 수 없습니다.";
 		};
 

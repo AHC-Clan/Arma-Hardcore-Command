@@ -5,7 +5,7 @@ private _missionSettingURL = "https://raw.githubusercontent.com/AHC-Clan/Arma-Ha
 private _missionSettingVar = "AHC_MissionSetting";
 
 [_missionSettingURL, _missionSettingVar] execVM "PHLogic\PH_UrlReader.sqf"; 
-sleep 1.5;
+waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 _missionSetting = (missionnamespace getVariable _missionSettingVar);
 _settingList = [_missionSetting, 0] call BIS_fnc_trimString splitString "=,";
@@ -25,3 +25,4 @@ for [{_i = 0}, {_i < count _settingList - 1}, {_i = _i + 2}] do
 
 // 설정 맵을 missionNamespace에 저장하여 외부에서 접근 가능하게 함
 missionNamespace setVariable ["AHC_SettingsMap", _settingsMap];
+missionNamespace setVariable ["AHC_Setting_Ready", true];

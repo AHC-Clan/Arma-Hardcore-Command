@@ -1,8 +1,9 @@
-
 waitUntil 
 {
     !isNull player && player == player && alive player
 };
+
+missionNamespace setVariable["AHC_MissionEnd", false];
 
 if (!hasInterface || isDedicated) exitWith { };
 
@@ -19,12 +20,11 @@ while { _blackScreenLoop } do
     sleep 0.1;
 };
 
+// 디브리핑 세팅
+[] spawn compile preprocessFileLineNumbers "PHLogic\PH_Debriefing.sqf";
 
 // AHC 로딩
-sleep 1;
+sleep 0.3;
+
 [] spawn compile preprocessFileLineNumbers "PHLogic\PH_Loading.sqf";
 
-
-// AHC 상태창
-sleep 1;
-[] execVM "PHPlayerStatus\PH_InitStatusPlayerLocal.sqf";

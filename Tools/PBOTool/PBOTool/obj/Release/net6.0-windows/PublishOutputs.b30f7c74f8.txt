@@ -1,0 +1,6 @@
+C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\PBOTool.exe
+C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\PBOTool.dll
+C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\PBOTool.deps.json
+C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\PBOTool.runtimeconfig.json
+C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\PBOTool.dll.config
+C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\PBOTool.pdb

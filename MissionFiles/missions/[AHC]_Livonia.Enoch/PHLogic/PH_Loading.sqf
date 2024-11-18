@@ -1,9 +1,14 @@
-[] execVM "PHLogic\PH_InitMission.sqf";
-sleep 3;
+missionNamespace setVariable ["AHC_Setting_Ready", false];
+missionNamespace setVariable ["AHC_MissionVar_Ready", false];
+missionNamespace setVariable["AHC_Badges_Ready", false];
 
-// 초기 설정
+// 미션 세팅 로드
+[] execVM "PHLogic\PH_InitMission.sqf";
+waitUntil { missionNamespace getVariable "AHC_Setting_Ready" };
+
+// 미션 세팅 설정
 [] execVM "PHLogic\PH_MissionVariable.sqf";
-sleep 1;
+waitUntil { missionNamespace getVariable "AHC_MissionVar_Ready" };
 
 pGetDistance = viewDistance;
 pGetObjDistance = getObjectViewDistance select 0;
@@ -14,33 +19,38 @@ setObjectViewDistance 1;
 removeAllWeapons player;
 removeBackpack player;
 
+sleep 0.1;
+
 enableRadio false; // 무전 비활성화
 enableSentences false; // AI 음성 비활성화
-enableEnvironment [false, true];  // 환경 효과: 일반 소리 비활성화, 바다 소리 유지
+enableEnvironment [true, true];
 
-// HUD 설정: 필요한 요소만 표시
-ShowHUD [
-    false, // 무기 패널
-    false, // 스탠스 인디케이터
-    true,  // 커서
-    false,  // 차량 정보
-    true,  // 방향 및 고도
-    true, // 채팅
-    false, // 팀 정보
-    false, // 명령 메뉴
-    true,  // 자막
-    false   // 그룹 정보
+showHUD [
+	true, // scriptedHUD
+	false, // info
+	true, // radar
+	true, // compass
+	true, // direction
+	false, // menu
+	false, // group
+	true, // cursors
+	false, // panels
+	false, // kills
+	true  // showIcon3D
 ];
+
+sleep 0.1;
 cutText ["", "BLACK", 0.001];
 
 // 미션 버전 정보 가져오기
 _missionVersion = "AHC_MissionVersion";
 ["https://raw.githubusercontent.com/AHC-Clan/Arma-Hardcore-Command/refs/heads/main/Mission/MissionVersion.txt", _missionVersion] execVM "PHLogic\PH_UrlReader.sqf";
-sleep 1.2;
+waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 // 미션 버전 확인
 _cv = localize "STR_MISSION_VERSION";
 _serverVersion = missionNamespace getVariable _missionVersion;
+waitUntil { !isNil"_serverVersion" };
 
 if (!SkipMissionVersionCheck && !isNil "_serverVersion" && isNil "_cv" && trim _serverVersion != trim _cv) exitWith 
 {
@@ -53,16 +63,24 @@ if (!SkipMissionVersionCheck && !isNil "_serverVersion" && isNil "_cv" && trim _
         [1,1,10,10], nil, 9999, 1, 0] spawn BIS_fnc_textTiles;
 };
 
-sleep 0.1;
-
 playMusic "EventTrack02_F_Orange";
 
 // 필수 스크립트 실행
-["PHLogic\PH_SafeZone.sqf", "PHLogic\PH_Respawn.sqf", "PHLogic\PH_Permission.sqf"] apply 
+["PHLogic\PH_SafeZone.sqf", "PHLogic\PH_Respawn.sqf", "PHLogic\PH_Permission.sqf", "PHLogic\PH_PlayerBadges.sqf"] apply 
 {
     [] execVM _x;
-    sleep 0.3;
+    sleep 0.2;
 };
+
+waitUntil { sleep 0.8; missionNamespace getVariable "AHC_Badges_Ready" };
+
+// 데이터베이스 스크립트 실행
+["PHDatabase\PH_InitAccountDatabase.sqf", "PHDatabase\PH_InitEntityActions.sqf"] apply 
+{
+    [] execVM _x;
+    sleep 0.2;
+};
+
 
 // 해상도별 텍스트 위치 설정
 _resFactor = getResolution select 5;
@@ -108,22 +126,26 @@ sleep 2.5;
 _introText = parseText "<t shadow='0'><t size='6.0'><img image='image\ahc.paa' /></t></t>";    
  [_introText,0,0.12,5,2,0,1] spawn bis_fnc_dynamicText;
 
-// 플레이어 위치 설정 (리스폰 확인)
-if ( !isNil "RespawnPoint") then
-{
-    player setPosASL(getPosASL RespawnPoint); 
-}
-else
-{
-    player setPosASL(getPosASL respawn); 
-    systemChat "리스폰 지점을 찾을 수 없습니다.";
-};
-
 sleep 4;
 
 // 초기 설정 복원
 setViewDistance pGetDistance;
 setObjectViewDistance pGetObjDistance;
+
+// 플레이어 위치 설정 (리스폰 확인)
+if ( !isNil "RespawnPoint") then
+{
+    RespawnPoint setDir 180;
+    player setDir (direction RespawnPoint);
+    player setPosASL (getPosASL RespawnPoint); 
+}
+else
+{
+    respawn setDir 180;
+    player setDir (direction respawn);
+    player setPosASL (getPosASL respawn); 
+    systemChat "리스폰 지점을 찾을 수 없습니다.";
+};
 
 cutText ["", "BLACK IN", 2];
 sleep 2.4;
