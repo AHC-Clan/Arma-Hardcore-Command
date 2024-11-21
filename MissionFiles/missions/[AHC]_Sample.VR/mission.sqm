@@ -42809,7 +42809,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3814.29,13.354,4819.9639};
-				angles[]={0,3.141593,-0};
+				angles[]={0,3.141593,0};
 			};
 			side="Empty";
 			class Attributes
@@ -49504,7 +49504,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3822.2898,13.009816,4815.9644};
+				position[]={3822.2898,13.009817,4815.9644};
 			};
 			side="Empty";
 			flags=4;
@@ -49515,6 +49515,7 @@ class Mission
 			};
 			id=351;
 			type="Land_CampingTable_white_F";
+			atlOffset=9.5367432e-07;
 			class CustomAttributes
 			{
 				class Attribute0

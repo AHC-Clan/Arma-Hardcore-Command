@@ -7,45 +7,63 @@ private _playerSkillVar = "AHC_PlayerBadges";
 waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 _permission = (missionnamespace getVariable _playerSkillVar);
-_userList = [_permission, 0] call BIS_fnc_trimString splitString "@\n";
+_userList = [_permission, 0] call BIS_fnc_trimString splitString "@#";
 
-// 현재 플레이어의 UID 가져오기
+// 현재 플레이어의 이름
 _playerName = name player;
 
 _unknownPlayer = true;
+_isInspection = false;
 
-// 사용자 리스트에서 권한 확인 및 액션 추가
+if (_permission find "--" == 0 OR
+    _permission find "점검" == 0) then 
 {
-    if ( _forEachIndex mod 2 == 1) then
+    _isInspection = true;
+    missionNamespace setVariable["AHC_Badges", "현재 데이터 점검중 입니다."];
+}
+else
+{
+    // 사용자 리스트에서 권한 확인 및 액션 추가
     {
-        continue;
-    };
+        if ( _forEachIndex mod 2 == 1) then
+        {
+            continue;
+        };
 
-    _name = trim (_userList select _forEachIndex);
-    if ( _name == "") then
-    {
-        continue;
-    };
+        _name = trim (_userList select _forEachIndex);
+        if ( _name == "") then
+        {
+            continue;
+        };
 
-    _badges = trim (_userList select (_forEachIndex + 1));
-    if ( isNil "_badges") then
-    {
-        continue;
-    };
+        _badges = trim (_userList select (_forEachIndex + 1));
+        if ( isNil "_badges") then
+        {
+            continue;
+        };
 
-    if ( toLower _name == toLower trim _playerName) exitWith
-    {
-         [format ["%1 님이 미션에 참가했습니다.", _name]] remoteExec ["systemChat", 0];
-         [format ["   L 보유 배지: %1", _badges]] remoteExec ["systemChat", 0];
-        missionNamespace setVariable["AHC_Badges", _badges];
-        _unknownPlayer = false;
-    };
-} forEach _userList;
+        if ( toLower _name == toLower trim _playerName) exitWith
+        {
+            [format ["%1 님이 미션에 참가했습니다.", _playerName]] remoteExec ["systemChat", 0];
+            [format ["   L 보유 배지: %1", _badges]] remoteExec ["systemChat", 0];
+            missionNamespace setVariable["AHC_Badges", _badges];
+            _unknownPlayer = false;
+        };
+    } forEach _userList;
+};
 
 if ( _unknownPlayer ) then
 {
     [format ["%1 님이 미션에 참가했습니다.", _playerName]] remoteExec ["systemChat", 0];
-    [format ["   L AHC 데이터에 등록된 정보가 없습니다. 운영진에게 요청해보세요."]] remoteExec ["systemChat", 0];
+
+    if ( _isInspection) then
+    {
+        [format ["   L 현재 AHC 데이터 베이스가 점검중 입니다."]] remoteExec ["systemChat", 0];
+    }
+    else
+    {
+        [format ["   L AHC 데이터에 등록된 정보가 없습니다. 운영진에게 요청해보세요."]] remoteExec ["systemChat", 0];
+    };
 };
 
 missionNamespace setVariable["AHC_Badges_Ready", true];

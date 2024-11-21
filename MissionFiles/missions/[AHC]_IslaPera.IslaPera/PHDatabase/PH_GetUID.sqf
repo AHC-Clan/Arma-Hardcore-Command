@@ -16,7 +16,7 @@ _allPlayerUID = "";
     if (toLower trim name _x == toLower trim _playerName) exitWith
     {
         _text = format["%1, %2", name _x, getPlayerUID _x];
-        systemChat _text;
+        systemChat format["%1 복사되었습니다.", _text];
         copyToClipboard _text;
     };
 } foreach allPlayers;

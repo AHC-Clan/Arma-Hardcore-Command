@@ -60,12 +60,19 @@ if ( isNil "_myBadges") exitWith
 };
 
 _displayText = _displayText + format["<t color='#ea9229' size='1.3'>보유한 배지</t><br/>%1<br/><br/>", _myBadges];
-_displayText = _displayText + format["<t color='#ea9229' size='1.3'>임무 성공/실패/전체</t><br/>%1 / %2 / %3<br/>", _loadGameWinCount, _loadGameLoseCount, _loadGameWinCount + _loadGameLoseCount];
-_displayText = _displayText + format["<t color='#ea9229' size='1.3'>적 사살 / 헤드샷</t><br/>%1 / %2<br/>", _loadKillCount, _loadKillHeadShotCount];
-_displayText = _displayText + format["<t color='#ea9229' size='1.3'>시민 사살 </t><br/>%1<br/>", _loadKillCivilianCount];
-_displayText = _displayText + format["<t color='#ea9229' size='1.3'>적에게 죽었던 횟수 </t><br/>%1<br/>", _loadRespawnCount];
-_displayText = _displayText + format["<t color='#ea9229' size='1.3'>선호하는 총기 </t><br/>%1<br/>", [_loadReloadWeapon] call GetFavoriteWeapon];
 
-_displayText = _displayText + format["<br/><t color='#c8c8c8' size='1.0'>훈련 서버에서는 카운트 되지않아요 :)</t>"];
+_displayCounter = format["<t color='#ea9229' size='1.3'>임무 성공/실패/전체</t><br/>%1 / %2 / %3<br/>", _loadGameWinCount, _loadGameLoseCount, _loadGameWinCount + _loadGameLoseCount];
+_displayCounter = _displayCounter + format["<t color='#ea9229' size='1.3'>적 사살 / 헤드샷</t><br/>%1 / %2<br/>", _loadKillCount, _loadKillHeadShotCount];
+_displayCounter = _displayCounter + format["<t color='#ea9229' size='1.3'>시민 사살 </t><br/>%1<br/>", _loadKillCivilianCount];
+_displayCounter = _displayCounter + format["<t color='#ea9229' size='1.3'>적에게 죽었던 횟수 </t><br/>%1<br/>", _loadRespawnCount];
+_displayCounter = _displayCounter + format["<t color='#ea9229' size='1.3'>선호하는 총기 </t><br/>%1<br/>", [_loadReloadWeapon] call GetFavoriteWeapon];
+_displayText = _displayText + _displayCounter;
+
+_displayText = _displayText + format["<br/><t color='#747474' size='1.0'>훈련맵에서는 카운트되지 않아요 :)</t>"];
 
 hint parseText format["%1", _displayText];
+
+// 아르마에서는 복사에 한글 있으면 문자열 깨짐
+_copyboard = format["[%1] Enemy Kill:(%2) HeadShot:(%3), Mission Win:(%4), Mission Fail:(%5), Civilian Kill:(%6), Death:(%7), Preferred Firearms:(%8)", name player, _loadKillCount, _loadKillHeadShotCount, _loadGameWinCount, _loadGameLoseCount, _loadKillCivilianCount, _loadRespawnCount, [_loadReloadWeapon] call GetFavoriteWeapon];
+systemChat "내 전적 정보가 복사되었습니다.";
+copyToClipboard _copyboard;

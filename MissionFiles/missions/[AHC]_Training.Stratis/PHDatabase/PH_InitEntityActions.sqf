@@ -29,7 +29,7 @@ player addEventHandler ["MagazineReloading",
 
 	if ( name _unit == name player ) then
 	{
-		// [_weapon] call compile preprocessFileLineNumbers "PHDatabase\PH_ReloadWeapon.sqf";
+		[_weapon] call compile preprocessFileLineNumbers "PHDatabase\PH_ReloadWeapon.sqf";
 	};
 }];
 
@@ -59,7 +59,7 @@ addMissionEventHandler ["EntityCreated", {
 					if (!(_target getVariable ["headshotCounted", false])) then
 					{
 						_target setVariable ["headshotCounted", true];
-						// ["AHC_KillHeadShotCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";
+						["AHC_KillHeadShotCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";
 					};				
 				};
 			};		
@@ -74,13 +74,13 @@ addMissionEventHandler ["EntityCreated", {
 				// 적군이면
 				if (side group _man in [east, sideEnemy]) then 
 				{
-					// ["AHC_KillCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";            
+					["AHC_KillCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";            
 				};
 
 				// 시민이면
 				if (side group _man == civilian) then
 				{
-					// ["AHC_KillCivilianCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";            
+					["AHC_KillCivilianCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";            
 				};
 			};
 
@@ -91,7 +91,7 @@ addMissionEventHandler ["EntityCreated", {
 				if (!isPlayer _killer && side group _killer in [east, sideEnemy]) then 
 				{
     				[format ["%1 님이 사망했습니다.", name _man]] remoteExec ["systemChat", 0];
-					// ["AHC_RespawnCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";            
+					["AHC_RespawnCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";            
 				};
 			};
 		}];

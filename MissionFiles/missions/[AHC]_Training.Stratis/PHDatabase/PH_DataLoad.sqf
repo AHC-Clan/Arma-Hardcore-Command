@@ -13,4 +13,4 @@
 params ["_dataKey", "_defaultValue"];
 
 // 데이터 불러오기 (없으면 기본 값 반환)
-profileNamespace getVariable [_dataKey, _defaultValue];
+// profileNamespace getVariable [_dataKey, _defaultValue];

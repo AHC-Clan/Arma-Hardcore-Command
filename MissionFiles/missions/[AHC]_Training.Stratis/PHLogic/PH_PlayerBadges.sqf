@@ -7,9 +7,9 @@ private _playerSkillVar = "AHC_PlayerBadges";
 waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 _permission = (missionnamespace getVariable _playerSkillVar);
-_userList = [_permission, 0] call BIS_fnc_trimString splitString "@\n";
+_userList = [_permission, 0] call BIS_fnc_trimString splitString "@#";
 
-// 현재 플레이어의 UID 가져오기
+// 현재 플레이어의 이름
 _playerName = name player;
 
 _unknownPlayer = true;
@@ -35,7 +35,7 @@ _unknownPlayer = true;
 
     if ( toLower _name == toLower trim _playerName) exitWith
     {
-         [format ["%1 님이 미션에 참가했습니다.", _name]] remoteExec ["systemChat", 0];
+         [format ["%1 님이 미션에 참가했습니다.", _playerName]] remoteExec ["systemChat", 0];
          [format ["   L 보유 배지: %1", _badges]] remoteExec ["systemChat", 0];
         missionNamespace setVariable["AHC_Badges", _badges];
         _unknownPlayer = false;

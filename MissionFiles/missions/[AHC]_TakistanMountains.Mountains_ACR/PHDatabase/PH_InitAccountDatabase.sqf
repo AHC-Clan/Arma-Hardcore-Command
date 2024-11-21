@@ -8,4 +8,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then
 	
 	_action = ["AHC_Account","내 클랜 활동 보기","",{execVM "PHDatabase\PH_DialogAccount.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	[player, 1, ["ACE_SelfActions", "AHC"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+	_action = ["AHC_CopyID","(유틸) 내 정보 복사","",{ [name player] execVM "PHDatabase\PH_GetUID.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	[player, 1, ["ACE_SelfActions", "AHC"], _action] call ace_interact_menu_fnc_addActionToObject;
 };
