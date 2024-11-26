@@ -5,7 +5,7 @@
 <img src="https://github.com/AHC-Clan/Arma-Hardcore-Command/blob/main/Sample/ahc.png"></img><br/>
 
 
-아래 영상을 참고하시면 쉽게 샘플을 업데이트 받을 수 있습니다.
+아래 영상을 자막 켜고 참고하시면 쉽게 샘플을 업데이트 받을 수 있습니다.
 
 https://youtu.be/AV7I9Ta1bLI
 
