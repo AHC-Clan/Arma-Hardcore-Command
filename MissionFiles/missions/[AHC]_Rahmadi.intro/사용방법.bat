@@ -1,1 +1,0 @@
-start https://github.com/AHC-Clan/Arma-Hardcore-Command/blob/main/README.md

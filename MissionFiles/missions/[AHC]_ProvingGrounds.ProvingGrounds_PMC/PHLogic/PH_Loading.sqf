@@ -41,6 +41,7 @@ showHUD [
 
 sleep 0.1;
 cutText ["", "BLACK", 0.001];
+//[true, 3, 3] call BIS_fnc_EXP_camp_setCinematicMode;
 
 // 미션 버전 정보 가져오기
 _missionVersion = "AHC_MissionVersion";
