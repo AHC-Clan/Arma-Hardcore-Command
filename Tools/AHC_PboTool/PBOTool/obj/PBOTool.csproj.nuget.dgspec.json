@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\janny\\Desktop\\PBOTool\\PBOTool\\PBOTool.csproj": {}
+    "G:\\AHC_Clan_Addons\\Arma-Hardcore-Command\\Tools\\AHC_PboTool\\PBOTool\\PBOTool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\janny\\Desktop\\PBOTool\\PBOTool\\PBOTool.csproj": {
+    "G:\\AHC_Clan_Addons\\Arma-Hardcore-Command\\Tools\\AHC_PboTool\\PBOTool\\PBOTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janny\\Desktop\\PBOTool\\PBOTool\\PBOTool.csproj",
+        "projectUniqueName": "G:\\AHC_Clan_Addons\\Arma-Hardcore-Command\\Tools\\AHC_PboTool\\PBOTool\\PBOTool.csproj",
         "projectName": "PBOTool",
-        "projectPath": "C:\\Users\\janny\\Desktop\\PBOTool\\PBOTool\\PBOTool.csproj",
+        "projectPath": "G:\\AHC_Clan_Addons\\Arma-Hardcore-Command\\Tools\\AHC_PboTool\\PBOTool\\PBOTool.csproj",
         "packagesPath": "C:\\Users\\janny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janny\\Desktop\\PBOTool\\PBOTool\\obj\\",
+        "outputPath": "G:\\AHC_Clan_Addons\\Arma-Hardcore-Command\\Tools\\AHC_PboTool\\PBOTool\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

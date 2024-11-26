@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\janny\Desktop\PBOTool\PBOTool\obj\Debug\net6.0-windows\
+G:\AHC_Clan_Addons\Arma-Hardcore-Command\Tools\AHC_PboTool\PBOTool\obj\Debug\net6.0-windows\
 PBOTool
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\janny\Desktop\PBOTool\PBOTool\App.xaml
+G:\AHC_Clan_Addons\Arma-Hardcore-Command\Tools\AHC_PboTool\PBOTool\App.xaml
 11407045341
 11402723358
 4248061568
 194237474483
 MainWindow.xaml;
 
-False
+True
 
