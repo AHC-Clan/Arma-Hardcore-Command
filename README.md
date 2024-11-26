@@ -3,49 +3,29 @@
 ---------------------------------------------------------------
 
 <img src="https://github.com/AHC-Clan/Arma-Hardcore-Command/blob/main/Sample/ahc.png"></img><br/>
-AHC 미션 샘플 [**[AHC]_Sample.VR.7z**](https://github.com/AHC-Clan/Arma-Hardcore-Command/blob/main/Sample/%5BAHC%5D_Sample.VR.7z) 파일을 받아주세요.
-
-샘플 사용 및 적용 방법은 아래 영상을 참고해 주세요.
-
-<https://youtu.be/_5X15Tm-6zE?si=ZEvv0SFyN-Vqfrnp>
 
 
-샘플버전은 항상 에디터에서 작업 모두 끝나고나서
+아래 영상을 참고하시면 쉽게 샘플을 업데이트 받을 수 있습니다.
 
-마무리 작업때 적용해주시면 좋습니다. ( 상관없긴함.. )
+https://youtu.be/AV7I9Ta1bLI
 
-Description.ext에서 필요시 제목 같은거 설정해주세요!
+AHC 미션 샘플은 [**[AHC]_Sample.VR.7z**](https://github.com/AHC-Clan/Arma-Hardcore-Command/blob/main/Sample/%5BAHC%5D_Sample.VR.7z) 파일을 받아주세요.
+
 
 > 제작 : Patch
-> 도움 : Zeratulspc
+> 샘플 도움 : AKASHI, Zeratulspc
 
 ---------------------------------------------------------------
-# [ 명령어 사용법 ]
-## 복사하셔서 사용하세요 :D
+# [ AHC 미션 샘플 헬퍼 ]
 ---------------------------------------------------------------
 
-### 해당 오브젝트를 아스날 메뉴를 만듭니다.
-> [this] execVM "PHScripts\PH_Arsnal.sqf";
-
-### 복장샘플 적용 스크립트 AI유닛에 적용시키면 됩니다.
-> [this] execVM "PHScripts\PH_CopyUnit.sqf";
-
-### 자막호출 = 홍길동님이 호출 하였습니다.
-> [nil, "홍길동", 1] execVM "PHScripts\PH_Call.sqf";
-
-### 자막호출 = AHC에서 홍길동님이 호출 하였습니다.
-> ["AHC", "홍길동", 2] execVM "PHScripts\PH_Call.sqf";
-
-### 자막호출 = AHC에서 호출 하였습니다.
-> ["AHC", nil, 3] execVM "PHScripts\PH_Call.sqf";
-
-### 자막호출 = 홍길동님이 멍청이을(를) 브리핑실로 호출 하였습니다.
-> ["멍청이", "홍길동", 4] execVM "PHScripts\PH_Call.sqf";
 
 
 ---------------------------------------------------------------
 # [ 수정내역 ]
 ---------------------------------------------------------------
+#### 2024.11.27 ( 작업자 Patch )
+> - 미션 샘플 헬퍼 제작
 
 #### 2024.11.04 ( 작업자 Patch )
 > - 샘플 리팩토링
