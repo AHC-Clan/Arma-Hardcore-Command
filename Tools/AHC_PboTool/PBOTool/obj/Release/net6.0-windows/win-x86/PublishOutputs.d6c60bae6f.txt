@@ -1,3 +1,0 @@
-C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\win-x86\PBOTool.pdb
-C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\win-x86\PBOTool.dll.config
-C:\Users\janny\Desktop\PBOTool\PBOTool\bin\Release\net6.0-windows\publish\win-x86\PBOTool.exe
