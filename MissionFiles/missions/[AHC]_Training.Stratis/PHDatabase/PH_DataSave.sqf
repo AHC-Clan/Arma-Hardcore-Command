@@ -10,5 +10,5 @@
 params ["_dataKey", "_dataValue"];
 
 // 데이터 저장
-// profileNamespace setVariable [_dataKey, _dataValue];
-// saveProfileNamespace;
+profileNamespace setVariable [_dataKey, _dataValue];
+saveProfileNamespace;

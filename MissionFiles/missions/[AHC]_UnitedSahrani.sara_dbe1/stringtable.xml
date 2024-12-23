@@ -2,7 +2,7 @@
 <Project name="PHAHC">
     <Package name="AHC">
         <Key ID="STR_MISSION_VERSION">
-            <English>24.11.27</English>
+            <English>24.12.23</English>
         </Key>
         <Key ID="STR_MISSION_MAKER">
             <English>Patch</English>

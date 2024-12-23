@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3730.3669,60.122772,4757.7148};
-		dir[]={0.93362135,-0.33522862,0.12659085};
-		up[]={0.332205,0.94212902,0.045044124};
-		aside[]={0.13436571,2.1519372e-07,-0.99095923};
+		pos[]={3830.2202,49.706387,4760.9194};
+		dir[]={-0.11825818,-0.60268974,0.78919834};
+		up[]={-0.089314394,0.7979688,0.59603977};
+		aside[]={0.98898602,1.9368599e-07,0.14819664};
 	};
 };
 binarizationWanted=0;
@@ -55278,20 +55278,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="markerAttach";
-					expression="if (_value isNotEqualTo objNull) then {[_this, _value] spawn expEden_fnc_markerAttachToObject};";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="<NULL-object>";
-						};
-					};
-				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
 		class Item545
@@ -55346,20 +55333,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="markerAttach";
-					expression="if (_value isNotEqualTo objNull) then {[_this, _value] spawn expEden_fnc_markerAttachToObject};";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="<NULL-object>";
-						};
-					};
-				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
 		class Item546
@@ -55412,20 +55386,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="markerAttach";
-					expression="if (_value isNotEqualTo objNull) then {[_this, _value] spawn expEden_fnc_markerAttachToObject};";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="<NULL-object>";
-						};
-					};
-				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
 		class Item547
@@ -55824,7 +55785,7 @@ class Mission
 					};
 					id=983;
 					type="B_officer_F";
-					atlOffset=9.5367432e-07;
+					atlOffset=1.9073486e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -56011,7 +55972,7 @@ class Mission
 			{
 			};
 			id=982;
-			atlOffset=9.5367432e-07;
+			atlOffset=1.9073486e-06;
 		};
 		class Item556
 		{
@@ -56706,7 +56667,7 @@ class Mission
 						angles[]={0,3.1415927,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=1;
@@ -56736,6 +56697,7 @@ class Mission
 					};
 					id=993;
 					type="B_Soldier_TL_F";
+					atlOffset=7.9696674;
 					class CustomAttributes
 					{
 						class Attribute0

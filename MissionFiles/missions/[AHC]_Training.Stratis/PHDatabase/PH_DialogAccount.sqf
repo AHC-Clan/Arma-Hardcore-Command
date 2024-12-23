@@ -68,7 +68,7 @@ _displayCounter = _displayCounter + format["<t color='#ea9229' size='1.3'>적에
 _displayCounter = _displayCounter + format["<t color='#ea9229' size='1.3'>선호하는 총기 </t><br/>%1<br/>", [_loadReloadWeapon] call GetFavoriteWeapon];
 _displayText = _displayText + _displayCounter;
 
-_displayText = _displayText + format["<br/><t color='#747474' size='1.0'>훈련맵에서는 카운트되지 않아요 :)</t>"];
+//_displayText = _displayText + format["<br/><t color='#747474' size='1.0'>아직 개발 중 입니다 :)</t>"];
 
 hint parseText format["%1", _displayText];
 
