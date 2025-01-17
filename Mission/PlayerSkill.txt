@@ -19,4 +19,4 @@ Lucas Springfield@정식클랜원, 기본교육#
 SILK@정식클랜원, 기본교육, 의료 심화#
 KimBob@정식클랜원, 기본교육#
 Yamilu@정식클랜원, 기본교육, 의료 심화#
-HOWARD@임시클랜원, 훈련대기#
+HOWARD@임시클랜원, 기본교육#
