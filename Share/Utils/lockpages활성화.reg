@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; LargeSystemCache 활성화 (1: 활성, 0: 비활성)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"LargeSystemCache"=dword:00000001
+
+; DisablePagingExecutive 활성화 (1: 커널 페이지 아웃 방지, 0: 비활성)
+"DisablePagingExecutive"=dword:00000001
