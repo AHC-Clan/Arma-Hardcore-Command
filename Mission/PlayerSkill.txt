@@ -22,3 +22,4 @@ Yamilu@정식클랜원, 기본교육, 의료 심화#
 HOWARD@정식클랜원, 기본교육#
 Coldcat@정식클랜원, 입문자교육, 기본교육#
 GoodNight@정식클랜원, 기본교육#
+KyoungKyum@훈련대기#
