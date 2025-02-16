@@ -19,4 +19,5 @@ Yamilu@정식클랜원, 기본 교육, 의료 교육#
 HOWARD@정식클랜원, 기본 교육#
 Coldcat@정식클랜원, 입문자 교육, 기본 교육#
 GoodNight@정식클랜원, 기본 교육#
-KyoungKyum@임시클랜원, 입문자 교육, 기본 교육#
+KyoungKyum@정식클랜원, 입문자 교육, 기본 교육#
+Moose@활동대기#
