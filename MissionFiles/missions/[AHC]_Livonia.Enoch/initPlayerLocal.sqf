@@ -1,3 +1,5 @@
+// AHC
+
 waitUntil 
 {
     !isNull player && player == player && alive player
@@ -21,10 +23,10 @@ while { _blackScreenLoop } do
 };
 
 // 디브리핑 세팅
-[] spawn compile preprocessFileLineNumbers "PHLogic\PH_Debriefing.sqf";
+[] spawn compile preprocessFileLineNumbers "AHC_Library\PHLogic\PH_Debriefing.sqf";
 
 // AHC 로딩
 sleep 0.3;
 
-[] spawn compile preprocessFileLineNumbers "PHLogic\PH_Loading.sqf";
+[] spawn compile preprocessFileLineNumbers "AHC_Library\PHLogic\PH_Loading.sqf";
 

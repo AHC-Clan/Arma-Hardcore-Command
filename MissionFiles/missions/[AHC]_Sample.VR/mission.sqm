@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3830.2202,49.706387,4760.9194};
-		dir[]={-0.11825818,-0.60268974,0.78919834};
-		up[]={-0.089314394,0.7979688,0.59603977};
-		aside[]={0.98898602,1.9368599e-07,0.14819664};
+		pos[]={3782.4546,42.409233,4781.4902};
+		dir[]={0.75447685,-0.31078461,0.57814318};
+		up[]={0.24670666,0.95046425,0.18904735};
+		aside[]={0.60826242,1.1515804e-06,-0.79377973};
 	};
 };
 binarizationWanted=0;
@@ -79,11 +79,12 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"asr_ai3_skills",
 	"A3_Weapons_F",
+	"AHC_compat_Vanila_Uniform",
+	"A3_expEden_characters",
 	"A3_Weapons_F_Items",
-	"ace_medical_engine",
 	"ace_medical_treatment",
 	"ace_nouniformrestrictions",
-	"tfar_external_intercom",
+	"acre_main",
 	"ace_goggles",
 	"ace_hearing",
 	"ace_gforces",
@@ -95,7 +96,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=42;
+		items=43;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -328,58 +329,65 @@ class AddonsMetaData
 		};
 		class Item33
 		{
-			className="ace_medical_engine";
-			name="ACE3 - Medical Engine";
-			author="ACE-팀";
-			url="https://ace3.acemod.org/";
+			className="AHC_compat_Vanila_Uniform";
+			name="ahc_compat_vanila_uniform";
+			author="Patch";
 		};
 		class Item34
+		{
+			className="A3_expEden_characters";
+			name="O&T Expansion Eden - Characters";
+			author="O&T Expansion Eden";
+			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
+		};
+		class Item35
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-팀";
 			url="https://ace3.acemod.org/";
 		};
-		class Item35
+		class Item36
 		{
 			className="ace_nouniformrestrictions";
 			name="ACE3 - No Uniform Restrictions";
 			author="ACE-팀";
 			url="https://ace3.acemod.org/";
 		};
-		class Item36
-		{
-			className="tfar_external_intercom";
-			name="TFAR - Intercom Phone";
-			author="Task Force Arrowhead Radio Team";
-		};
 		class Item37
+		{
+			className="acre_main";
+			name="ACRE2 - Main";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item38
 		{
 			className="ace_goggles";
 			name="ACE3 - Goggles";
 			author="ACE-팀";
 			url="https://ace3.acemod.org/";
 		};
-		class Item38
+		class Item39
 		{
 			className="ace_hearing";
 			name="ACE3 - Hearing";
 			author="ACE-팀";
 			url="https://ace3.acemod.org/";
 		};
-		class Item39
+		class Item40
 		{
 			className="Chemlight_WeightReduction";
 			name="Chemlight_WeightReduction";
 		};
-		class Item40
+		class Item41
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-팀";
 			url="https://ace3.acemod.org/";
 		};
-		class Item41
+		class Item42
 		{
 			className="ace_chemlights";
 			name="ACE3 - Chemlights";
@@ -48337,7 +48345,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=315;
@@ -48665,7 +48673,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=324;
@@ -48713,7 +48721,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=325;
@@ -49081,7 +49089,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\FireTip.jpg";
+							value="AHC_Library\PHImage\FireTip.jpg";
 						};
 					};
 				};
@@ -49111,7 +49119,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=336;
@@ -49176,7 +49184,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\FireTip.jpg";
+							value="AHC_Library\PHImage\FireTip.jpg";
 						};
 					};
 				};
@@ -53050,7 +53058,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -53117,7 +53125,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -53208,7 +53216,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing) then  " \n "{ " \n "    [this, au_brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; }";
+				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing) then  " \n "{ " \n "    [this, au_brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; }";
 				disableSimulation=1;
 			};
 			id=472;
@@ -53225,7 +53233,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -53292,7 +53300,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; }";
+				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; }";
 				disableSimulation=1;
 			};
 			id=474;
@@ -53309,7 +53317,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -53657,7 +53665,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -53724,7 +53732,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -53817,7 +53825,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing) then  " \n "{ " \n "    [this, au_brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; }";
+				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing) then  " \n "{ " \n "    [this, au_brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; }";
 				disableSimulation=1;
 			};
 			id=489;
@@ -53834,7 +53842,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -54272,8 +54280,8 @@ class Mission
 			{
 				text="무적 지역";
 				condition="call{this && (player in thisList)}";
-				onActivation="call{[true] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
-				onDeactivation="call{[false] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
+				onActivation="call{[true] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
+				onDeactivation="call{[false] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
 				sizeA=15.985;
 				sizeB=22.805479;
 				sizeC=5;
@@ -54293,8 +54301,8 @@ class Mission
 			{
 				text="무적 지역";
 				condition="call{this && (player in thisList)}";
-				onActivation="call{[true] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
-				onDeactivation="call{[false] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
+				onActivation="call{[true] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
+				onDeactivation="call{[false] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
 				sizeA=11.284;
 				sizeB=10.031;
 				sizeC=5;
@@ -54314,8 +54322,8 @@ class Mission
 			{
 				text="무적 지역";
 				condition="call{this && (player in thisList)}";
-				onActivation="call{[true] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
-				onDeactivation="call{[false] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
+				onActivation="call{[true] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
+				onDeactivation="call{[false] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
 				sizeA=37.547623;
 				sizeB=12.105243;
 				sizeC=5;
@@ -54335,8 +54343,8 @@ class Mission
 			{
 				text="무적 지역";
 				condition="call{this && (player in thisList)}";
-				onActivation="call{[true] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
-				onDeactivation="call{[false] execVM ""PHScripts\PH_ArsnalZone.sqf"";}";
+				onActivation="call{[true] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
+				onDeactivation="call{[false] execVM ""AHC_Library\PHScripts\PH_ArsnalZone.sqf"";}";
 				sizeA=52.063;
 				sizeB=14.978;
 				sizeC=9.4969997;
@@ -54667,7 +54675,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑룸 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( isNull destroyer) then  " \n "{ " \n "    [this, destroyer, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};}";
+				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑룸 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( isNull destroyer) then  " \n "{ " \n "    [this, destroyer, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};}";
 				disableSimulation=1;
 			};
 			id=554;
@@ -54684,7 +54692,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -54716,7 +54724,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; }";
+				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; }";
 				disableSimulation=1;
 			};
 			id=555;
@@ -54733,7 +54741,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -54764,7 +54772,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "}; }";
+				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull brifing) then  " \n "{ " \n "    [this, brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "}; }";
 				disableSimulation=1;
 			};
 			id=556;
@@ -54781,7 +54789,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -54813,7 +54821,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( !isNull destroyer) then  " \n "{ " \n "    [this, destroyer, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};}";
+				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( !isNull destroyer) then  " \n "{ " \n "    [this, destroyer, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};}";
 				disableSimulation=1;
 			};
 			id=557;
@@ -54830,7 +54838,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -54862,7 +54870,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( not isNull au_brifing2) then  " \n "{ " \n "    [this, au_brifing2, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};}";
+				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( not isNull au_brifing2) then  " \n "{ " \n "    [this, au_brifing2, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};}";
 				disableSimulation=1;
 			};
 			id=558;
@@ -54878,7 +54886,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -54910,7 +54918,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( not isNull au_brifing2) then  " \n "{ " \n "    [this, au_brifing2, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};}";
+				init="call{if ( not isNull au_respawn) then  " \n "{ " \n "    [this, au_respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( not isNull au_brifing3) then  " \n "{ " \n "    [this, au_brifing3, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( not isNull au_brifing2) then  " \n "{ " \n "    [this, au_brifing2, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};}";
 				disableSimulation=1;
 			};
 			id=559;
@@ -54926,7 +54934,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -54957,7 +54965,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( !isNull destroyer) then  " \n "{ " \n "    [this, destroyer, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf""; " \n "};}";
+				init="call{if ( !isNull respawn) then  " \n "{ " \n "    [this, respawn, ""아스널/사격 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";  " \n "}; " \n " " \n "if ( !isNull carrier) then  " \n "{ " \n "    [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};  " \n " " \n "if ( !isNull destroyer) then  " \n "{ " \n "    [this, destroyer, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; " \n "};}";
 				disableSimulation=1;
 			};
 			id=560;
@@ -54973,7 +54981,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -55004,7 +55012,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf"";};}";
+				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";};}";
 				disableSimulation=1;
 			};
 			id=561;
@@ -55021,7 +55029,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -55052,7 +55060,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf"";};}";
+				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";};}";
 				disableSimulation=1;
 			};
 			id=562;
@@ -55069,7 +55077,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -55201,8 +55209,8 @@ class Mission
 			class Attributes
 			{
 				condition="call{this && (player in thisList)}";
-				onActivation="call{[true] execVM ""PHLogic\PH_ArsnalZone.sqf"";}";
-				onDeactivation="call{[false] execVM ""PHLogic\PH_ArsnalZone.sqf"";}";
+				onActivation="call{[true] execVM ""AHC_Library\PHLogic\PH_ArsnalZone.sqf"";}";
+				onDeactivation="call{[false] execVM ""AHC_Library\PHLogic\PH_ArsnalZone.sqf"";}";
 				sizeA=16.070999;
 				sizeB=35.696079;
 				sizeC=5;

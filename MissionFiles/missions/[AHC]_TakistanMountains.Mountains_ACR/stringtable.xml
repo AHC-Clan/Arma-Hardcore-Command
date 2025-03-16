@@ -1,8 +1,9 @@
+<!-- AHC -->
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="PHAHC">
     <Package name="AHC">
         <Key ID="STR_MISSION_VERSION">
-            <English>24.12.23</English>
+            <English>25.03.16</English>
         </Key>
         <Key ID="STR_MISSION_MAKER">
             <English>Patch</English>

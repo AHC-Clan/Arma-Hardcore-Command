@@ -1,3 +1,5 @@
+// AHC
+
 class Header
 {
 	gameType = "Coop";
@@ -9,7 +11,7 @@ class Header
 onLoadName 						= "AHC";
 onLoadMission                   = "AHC - Arma3 Hardcore Command";
 author 							= "Patch";
-loadScreen 						= "image\ahc_logo.jpg";
+loadScreen 						= "AHC_Library\PHImage\ahc_mission.jpg";
 
 // 미션 설정
 onLoadMissionsTime 				= false;
@@ -21,7 +23,7 @@ saving 							= 0;
 
 // 리스폰 설정
 Respawn 						= "BASE";
-RespawnDelay					= 1;
+RespawnDelay					= 10;
 respawnVehicleDelay             = 60;
 RespawnDialog 					= 0;
 
@@ -34,19 +36,6 @@ showWatch						= 1;
 // 시뮬레이션 설정
 forceRotorLibSimulation			= 0;
 
-
-minPlayerDistance = 10;  //-- Garbage collector despawn distance
-
-corpseManagerMode = 1;  //-- 1: All, 2: Players, 3: All but players
-corpseLimit = 30;
-corpseRemovalMinTime = 60; 
-corpseRemovalMaxTime = 120;
-
-wreckManagerMode = 3;  //-- 1: All, 2: Players, 3: All but players
-wreckLimit = 15;
-wreckRemovalMinTime = 300; 
-wreckRemovalMaxTime = 600;
-
 loadScreen = "image\ahc.paa";
 
 debriefing = 1;
@@ -57,8 +46,8 @@ class CfgDebriefing
 		title = "임무 실패";
         subtitle = "디브리핑 준비해주세요..";
         description = "모두 고생하셨습니다. 완료 버튼까지 눌러야지 AHC 계정 데이터가 저장됩니다.";
-        pictureBackground = "image\ahc.paa";
-        picture = "image\ahc.paa";
+        pictureBackground = "AHC_Library\PHImage\ahc.paa";
+        picture = "AHC_Library\PHImage\ahc.paa";
         pictureColor[] = {0.0, 0.3, 0.6, 1};
 	};
     class End1
@@ -66,8 +55,8 @@ class CfgDebriefing
         title = "임무 완수";
         subtitle = "디브리핑 준비해주세요.";
         description = "모두 고생하셨습니다. 완료 버튼까지 눌러야지 AHC 계정 데이터가 저장됩니다.";
-        pictureBackground = "image\ahc.paa";
-        picture = "image\ahc.paa";
+        pictureBackground = "AHC_Library\PHImage\ahc.paa";
+        picture = "AHC_Library\PHImage\ahc.paa";
         pictureColor[] = {0.0, 0.3, 0.6, 1};
     };
 };
