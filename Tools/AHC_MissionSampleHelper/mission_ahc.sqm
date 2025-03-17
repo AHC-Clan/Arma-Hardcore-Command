@@ -2391,7 +2391,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=84;
@@ -2719,7 +2719,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=93;
@@ -2767,7 +2767,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=94;
@@ -3135,7 +3135,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\FireTip.jpg";
+							value="AHC_Library\PHImage\FireTip.jpg";
 						};
 					};
 				};
@@ -3165,7 +3165,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] execVM ""PHScripts\PH_Arsnal.sqf"";}";
+				init="call{[this] execVM ""AHC_Library\PHScripts\PH_Arsnal.sqf"";}";
 				disableSimulation=1;
 			};
 			id=105;
@@ -3230,7 +3230,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\FireTip.jpg";
+							value="AHC_Library\PHImage\FireTip.jpg";
 						};
 					};
 				};
@@ -7108,7 +7108,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -7175,7 +7175,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -7242,7 +7242,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -7309,7 +7309,7 @@ class Mission
 					{
 						skill=1;
 						rank="COLONEL";
-						init="call{[this] execVM ""PHScripts\PH_CopyUnit.sqf"";}";
+						init="call{[this] execVM ""AHC_Library\PHScripts\PH_CopyUnit.sqf"";}";
 						class Inventory
 						{
 						};
@@ -7750,7 +7750,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf"";};}";
+				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";};}";
 				disableSimulation=1;
 			};
 			id=267;
@@ -7767,7 +7767,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -7798,7 +7798,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""PHScripts\PH_Move.sqf"";};}";
+				init="call{if ( !isNull brifing) then {[this, brifing, ""브리핑실 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";}; if ( !isNull carrier) then { [this, carrier, ""항공모함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf""; }; if ( !isNull destroyer) then {[this, destroyer, ""구축함 이동""] execVM ""AHC_Library\PHScripts\PH_Move.sqf"";};}";
 				disableSimulation=1;
 			};
 			id=268;
@@ -7815,7 +7815,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="image\1_arsnal.jpg";
+							value="AHC_Library\PHImage\1_arsnal.jpg";
 						};
 					};
 				};
@@ -7842,8 +7842,8 @@ class Mission
 			class Attributes
 			{
 				condition="call{this && (player in thisList)}";
-				onActivation="call{[true] execVM ""PHLogic\PH_ArsnalZone.sqf"";}";
-				onDeactivation="call{[false] execVM ""PHLogic\PH_ArsnalZone.sqf"";}";
+				onActivation="call{[true] execVM ""AHC_Library\PHLogic\PH_ArsnalZone.sqf"";}";
+				onDeactivation="call{[false] execVM ""AHC_Library\PHLogic\PH_ArsnalZone.sqf"";}";
 				sizeA=16.070999;
 				sizeB=35.696079;
 				sizeC=5;
