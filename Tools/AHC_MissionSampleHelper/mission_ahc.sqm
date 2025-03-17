@@ -49,7 +49,6 @@ addons[]=
 	"ace_attach",
 	"ace_chemlights"
 };
-
 class Mission
 {
 	class Intel
