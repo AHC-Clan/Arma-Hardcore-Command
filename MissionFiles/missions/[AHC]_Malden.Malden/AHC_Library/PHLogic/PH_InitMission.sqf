@@ -4,7 +4,7 @@
 private _missionSettingURL = "https://raw.githubusercontent.com/AHC-Clan/Arma-Hardcore-Command/refs/heads/main/Mission/MissionSetting.txt";
 private _missionSettingVar = "AHC_MissionSetting";
 
-[_missionSettingURL, _missionSettingVar] execVM "PHLogic\PH_UrlReader.sqf"; 
+[_missionSettingURL, _missionSettingVar] execVM "AHC_Library\PHLogic\PH_UrlReader.sqf"; 
 waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 _missionSetting = (missionnamespace getVariable _missionSettingVar);

@@ -3,7 +3,7 @@
 private _playerSkillURL = "https://raw.githubusercontent.com/AHC-Clan/Arma-Hardcore-Command/refs/heads/main/Mission/PlayerSkill.txt";
 private _playerSkillVar = "AHC_PlayerBadges";
 
-[_playerSkillURL, _playerSkillVar] execVM "PHLogic\PH_UrlReader.sqf"; 
+[_playerSkillURL, _playerSkillVar] execVM "AHC_Library\PHLogic\PH_UrlReader.sqf"; 
 waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 _permission = (missionnamespace getVariable _playerSkillVar);

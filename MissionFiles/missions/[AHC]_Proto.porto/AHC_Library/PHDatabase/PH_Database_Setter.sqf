@@ -1,6 +1,6 @@
 // 2024-11-18 Patch
 // 플레이어 데이터를 수정
-// ["ALL"] execVM "PHDatabase\PH_Database_Setter.sqf";
+// ["ALL"] execVM "AHC_Library\PHDatabase\PH_Database_Setter.sqf";
 
 params ["_playerName"];
 private _executingPlayer = player; // 명령어를 실행한 사람
@@ -19,25 +19,25 @@ GetDataBaseALL =
 
     // 적 킬 카운트
     _killCountKey = format["AHC_KillCount_%1", _playerUID];
-    _loadKillCount = [_killCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadKillCount = [_killCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // 적 헤드샷 카운트
     _killHeadShotCountKey = format["AHC_KillHeadShotCount_%1", _playerUID];
-    _loadKillHeadShotCount = [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadKillHeadShotCount = [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // 임무 성공, 실패 횟수 카운트
     _gameWinCountKey = format["AHC_GameWinCount_%1", _playerUID];
     _gameLoseCountKey = format["AHC_GameLoseCount_%1", _playerUID];
-    _loadGameWinCount = [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
-    _loadGameLoseCount = [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadGameWinCount = [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
+    _loadGameLoseCount = [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // 시민 사살 카운트
     _killCivilianCountKey = format["AHC_KillCivilianCount_%1", _playerUID];
-    _loadKillCivilianCount = [_killCivilianCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadKillCivilianCount = [_killCivilianCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // AI에게 죽어서 리스폰한 카운트
     _killedAiRespawnCount = format["AHC_RespawnCount_%1", _playerUID];
-    _loadRespawnCount = [_killedAiRespawnCount, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadRespawnCount = [_killedAiRespawnCount, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     _myBadges = missionNamespace getVariable "AHC_Badges";
 
@@ -60,25 +60,25 @@ GetDatabaseTarget =
 
     // 적 킬 카운트
     _killCountKey = format["AHC_KillCount_%1", _playerUID];
-    _loadKillCount = [_killCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadKillCount = [_killCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // 적 헤드샷 카운트
     _killHeadShotCountKey = format["AHC_KillHeadShotCount_%1", _playerUID];
-    _loadKillHeadShotCount = [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadKillHeadShotCount = [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // 임무 성공, 실패 횟수 카운트
     _gameWinCountKey = format["AHC_GameWinCount_%1", _playerUID];
     _gameLoseCountKey = format["AHC_GameLoseCount_%1", _playerUID];
-    _loadGameWinCount = [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
-    _loadGameLoseCount = [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadGameWinCount = [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
+    _loadGameLoseCount = [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // 시민 사살 카운트
     _killCivilianCountKey = format["AHC_KillCivilianCount_%1", _playerUID];
-    _loadKillCivilianCount = [_killCivilianCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadKillCivilianCount = [_killCivilianCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     // AI에게 죽어서 리스폰한 카운트
     _killedAiRespawnCount = format["AHC_RespawnCount_%1", _playerUID];
-    _loadRespawnCount = [_killedAiRespawnCount, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+    _loadRespawnCount = [_killedAiRespawnCount, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
     _myBadges = missionNamespace getVariable "AHC_Badges";
 

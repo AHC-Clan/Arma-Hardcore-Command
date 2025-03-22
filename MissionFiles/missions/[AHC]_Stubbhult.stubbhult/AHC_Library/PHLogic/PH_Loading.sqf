@@ -3,11 +3,11 @@ missionNamespace setVariable ["AHC_MissionVar_Ready", false];
 missionNamespace setVariable["AHC_Badges_Ready", false];
 
 // 미션 세팅 로드
-[] execVM "PHLogic\PH_InitMission.sqf";
+[] execVM "AHC_Library\PHLogic\PH_InitMission.sqf";
 waitUntil { missionNamespace getVariable "AHC_Setting_Ready" };
 
 // 미션 세팅 설정
-[] execVM "PHLogic\PH_MissionVariable.sqf";
+[] execVM "AHC_Library\PHLogic\PH_MissionVariable.sqf";
 waitUntil { missionNamespace getVariable "AHC_MissionVar_Ready" };
 
 pGetDistance = viewDistance;
@@ -45,7 +45,7 @@ cutText ["", "BLACK", 0.001];
 
 // 미션 버전 정보 가져오기
 _missionVersion = "AHC_MissionVersion";
-["https://raw.githubusercontent.com/AHC-Clan/Arma-Hardcore-Command/refs/heads/main/Mission/MissionVersion.txt", _missionVersion] execVM "PHLogic\PH_UrlReader.sqf";
+["https://raw.githubusercontent.com/AHC-Clan/Arma-Hardcore-Command/refs/heads/main/Mission/MissionVersion.txt", _missionVersion] execVM "AHC_Library\PHLogic\PH_UrlReader.sqf";
 waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 // 미션 버전 확인
@@ -67,7 +67,7 @@ if (!SkipMissionVersionCheck && !isNil "_serverVersion" && isNil "_cv" && trim _
 playMusic "EventTrack02_F_Orange";
 
 // 필수 스크립트 실행
-["PHLogic\PH_SafeZone.sqf", "PHLogic\PH_Respawn.sqf", "PHLogic\PH_Permission.sqf", "PHLogic\PH_PlayerBadges.sqf"] apply 
+["AHC_Library\PHLogic\PH_SafeZone.sqf", "AHC_Library\PHLogic\PH_Respawn.sqf", "AHC_Library\PHLogic\PH_Permission.sqf", "AHC_Library\PHLogic\PH_PlayerBadges.sqf"] apply 
 {
     [] execVM _x;
     sleep 0.2;
@@ -76,7 +76,7 @@ playMusic "EventTrack02_F_Orange";
 waitUntil { sleep 1; missionNamespace getVariable "AHC_Badges_Ready" };
 
 // 데이터베이스 스크립트 실행
-// ["PHDatabase\PH_InitAccountDatabase.sqf", "PHDatabase\PH_InitEntityActions.sqf"] apply 
+// ["AHC_Library\PHDatabase\PH_InitAccountDatabase.sqf", "AHC_Library\PHDatabase\PH_InitEntityActions.sqf"] apply 
 // {
 //     [] execVM _x;
 //     sleep 0.2;

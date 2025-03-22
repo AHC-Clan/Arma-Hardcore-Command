@@ -10,7 +10,7 @@
 // CBA 키바인딩
 // if (isClass (configFile >> "CfgPatches" >> "cba_main")) then 
 // {
-// 	["AHC 설정창", "AHC_Status_View", ["AHC 현재 미션 전적", "내 전적을 열어봅니다."], { }, { []execVM "PHPlayerStatus\PH_StatusDialog.sqf"; }, [43, [false, true, false]]] call cba_fnc_addKeybind;
+// 	["AHC 설정창", "AHC_Status_View", ["AHC 현재 미션 전적", "내 전적을 열어봅니다."], { }, { []execVM "AHC_Library\PHPlayerStatus\PH_StatusDialog.sqf"; }, [43, [false, true, false]]] call cba_fnc_addKeybind;
 // };
 
 // ACE 셀프 인터렉션
@@ -19,7 +19,7 @@
 // 	_action = ["AHC","AHC 클랜","", {},{true}] call ace_interact_menu_fnc_createAction;
 // 	[player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
-	//_action = ["AHC_Status","현재 미션 전적 보기","",{execVM "PHPlayerStatus\PH_StatusDialog.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	//_action = ["AHC_Status","현재 미션 전적 보기","",{execVM "AHC_Library\PHPlayerStatus\PH_StatusDialog.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	//[player, 1, ["ACE_SelfActions", "AHC"], _action] call ace_interact_menu_fnc_addActionToObject;
 // };
 	

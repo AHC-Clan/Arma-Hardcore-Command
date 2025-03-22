@@ -6,7 +6,7 @@
 private _permissionURL = "https://raw.githubusercontent.com/AHC-Clan/Arma-Hardcore-Command/refs/heads/main/Mission/CameraPermission.txt";
 private _permissionVar = "AHC_Permission";
 
-[_permissionURL, _permissionVar] execVM "PHLogic\PH_UrlReader.sqf"; 
+[_permissionURL, _permissionVar] execVM "AHC_Library\PHLogic\PH_UrlReader.sqf"; 
 waitUntil { sleep 1; missionNamespace getVariable "AHC_URL_READY" };
 
 _permission = (missionnamespace getVariable _permissionVar);

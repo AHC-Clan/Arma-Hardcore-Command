@@ -11,7 +11,7 @@ if ( isNil "_weaponKey") exitWith
 _playerUID  = getPlayerUID player;
 _reloadkey = format["AHC_MagazineReloading_%1", _playerUID];
 
-_currentReloadData = [_reloadkey, []] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_currentReloadData = [_reloadkey, []] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 if ( typeName _currentReloadData != "ARRAY") then
 {
     _currentReloadData = [];
@@ -31,4 +31,4 @@ else
     _currentReloadData set[_currentReloadData findIf {_x select 0 == _weaponKey}, [_weaponKey, _reloadCount]];
 };
 
-[_reloadkey, _currentReloadData] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+[_reloadkey, _currentReloadData] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";

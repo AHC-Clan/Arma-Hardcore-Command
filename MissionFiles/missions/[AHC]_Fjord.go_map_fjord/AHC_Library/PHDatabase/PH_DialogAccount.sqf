@@ -22,29 +22,29 @@ _playerUID  = getPlayerUID player;
 
 // 적 킬 카운트
 _killCountKey = format["AHC_KillCount_%1", _playerUID];
-_loadKillCount = [_killCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_loadKillCount = [_killCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
 // 적 헤드샷 카운트
 _killHeadShotCountKey = format["AHC_KillHeadShotCount_%1", _playerUID];
-_loadKillHeadShotCount = [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_loadKillHeadShotCount = [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
 // 임무 성공, 실패 횟수 카운트
 _gameWinCountKey = format["AHC_GameWinCount_%1", _playerUID];
 _gameLoseCountKey = format["AHC_GameLoseCount_%1", _playerUID];
-_loadGameWinCount = [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
-_loadGameLoseCount = [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_loadGameWinCount = [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
+_loadGameLoseCount = [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
 // 시민 사살 카운트
 _killCivilianCountKey = format["AHC_KillCivilianCount_%1", _playerUID];
-_loadKillCivilianCount = [_killCivilianCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_loadKillCivilianCount = [_killCivilianCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
 // AI에게 죽어서 리스폰한 카운트
 _killedAiRespawnCount = format["AHC_RespawnCount_%1", _playerUID];
-_loadRespawnCount = [_killedAiRespawnCount, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_loadRespawnCount = [_killedAiRespawnCount, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
 // 재장전 횟수, 선호하는 총기
 _reloadWeaponKey = format["AHC_MagazineReloading_%1", _playerUID];
-_loadReloadWeapon = [_reloadWeaponKey, []] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_loadReloadWeapon = [_reloadWeaponKey, []] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 
 _myBadges = missionNamespace getVariable "AHC_Badges";
 

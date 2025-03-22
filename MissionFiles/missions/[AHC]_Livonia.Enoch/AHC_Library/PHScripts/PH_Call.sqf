@@ -1,6 +1,6 @@
 //! 2018-02-10 패치
 //! 호출기능
-//! [위치, 닉네임, 타입] execVM "PHScripts\PH_Call.sqf";
+//! [위치, 닉네임, 타입] execVM "PH_Call.sqf";
 _slocation = _this select 0;
 _sName = _this select 1;
 _CallType = _this select 2;

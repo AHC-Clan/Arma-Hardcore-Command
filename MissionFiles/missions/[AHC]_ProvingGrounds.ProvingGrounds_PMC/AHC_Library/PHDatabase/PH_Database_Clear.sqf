@@ -1,6 +1,6 @@
 // 2024-11-18 Patch
 // 플레이어 데이터를 초기화 하기 위함
-// ["ALL"] execVM "PHDatabase\PH_Database_Clear.sqf";
+// ["ALL"] execVM "AHC_Library\PHDatabase\PH_Database_Clear.sqf";
 
 params ["_playerName"];
 private _executingPlayer = player; // 명령어를 실행한 사람
@@ -19,31 +19,31 @@ SetClearDatabase =
 
     // 적 킬 카운트
     _killCountKey = format["AHC_KillCount_%1", _playerUID];
-    [_killCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+    [_killCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";
 
     // 적 헤드샷 카운트
     _killHeadShotCountKey = format["AHC_KillHeadShotCount_%1", _playerUID];
-    [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+    [_killHeadShotCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";
 
     // 시민 사살 카운트
     _killCivCountKey = format["AHC_KillCivilianCount_%1", _playerUID];
-    [_killCivCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+    [_killCivCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";
 
     // 적에게 죽은 카운트
     _respawnCountKey = format["AHC_RespawnCount_%1", _playerUID];
-    [_respawnCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+    [_respawnCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";
 
     // 임무성공
     _gameWinCountKey = format["AHC_GameWinCount_%1", _playerUID];
-    [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+    [_gameWinCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";
 
     // 임무실패
     _gameLoseCountKey = format["AHC_GameLoseCount_%1", _playerUID];
-    [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+    [_gameLoseCountKey, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";
 
     // 재장전 횟수
     _reloadkey = format["AHC_MagazineReloading_%1", _playerUID];
-    [_reloadkey, []] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";        
+    [_reloadkey, []] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";        
 };
 
 // 모든 플레이어 데이터 초기화

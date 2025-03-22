@@ -19,6 +19,6 @@ _pUnit addEventHandler [ "AnimDone", {
 	};
 }];
 
-_pUnit addAction["<t color='#FE2E2E'><t size='1.4'>샘플 등록</t></t>",{[_this select 3, 0] execVM "PHScripts\PH_Copy.sqf";}, _pUnit]; 
-_pUnit addAction["<t color='#31B404'><t size='1.4'>샘플 착용</t></t>",{[_this select 3, 1] execVM "PHScripts\PH_Copy.sqf";}, _pUnit]; 
-_pUnit addAction["<t color='#848484'><t size='1.4'>샘플 초기화</t></t>",{[_this select 3, 2] execVM "PHScripts\PH_Copy.sqf";}, _pUnit];
+_pUnit addAction["<t color='#FE2E2E'><t size='1.4'>샘플 등록</t></t>",{[_this select 3, 0] execVM "AHC_Library\PHScripts\PH_Copy.sqf";}, _pUnit]; 
+_pUnit addAction["<t color='#31B404'><t size='1.4'>샘플 착용</t></t>",{[_this select 3, 1] execVM "AHC_Library\PHScripts\PH_Copy.sqf";}, _pUnit]; 
+_pUnit addAction["<t color='#848484'><t size='1.4'>샘플 초기화</t></t>",{[_this select 3, 2] execVM "AHC_Library\PHScripts\PH_Copy.sqf";}, _pUnit];

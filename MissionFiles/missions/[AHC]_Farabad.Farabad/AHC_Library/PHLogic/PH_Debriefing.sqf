@@ -6,11 +6,11 @@ addMissionEventHandler ["Ended",
     {
         case "end1": {
             // WIN 카운트
-            ["AHC_GameWinCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";
+            ["AHC_GameWinCount"] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_AddCount.sqf";
         };
         case "lose": {
             // Lose 카운트
-            ["AHC_GameLoseCount"] call compile preprocessFileLineNumbers "PHDatabase\PH_AddCount.sqf";        
+            ["AHC_GameLoseCount"] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_AddCount.sqf";        
         };
     };
 

@@ -27,6 +27,6 @@ player addEventHandler ["Respawn",
 		};
 
 		// 권한 스크립트 실행
-		[] execVM "PHLogic\PH_Permission.sqf";
+		[] execVM "AHC_Library\PHLogic\PH_Permission.sqf";
 	};	
 }];

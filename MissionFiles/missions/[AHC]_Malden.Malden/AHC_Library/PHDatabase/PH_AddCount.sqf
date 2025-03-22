@@ -10,7 +10,7 @@ if ( isNil "_variableName") exitWith
 
 _playerUID  = getPlayerUID player;
 _key = format["%1_%2", _variableName, _playerUID];
-_currentCount = [_key, 0] call compile preprocessFileLineNumbers "PHDatabase\PH_DataLoad.sqf";
+_currentCount = [_key, 0] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataLoad.sqf";
 _currentCount = _currentCount + 1;
 
-[_key, _currentCount] call compile preprocessFileLineNumbers "PHDatabase\PH_DataSave.sqf";
+[_key, _currentCount] call compile preprocessFileLineNumbers "AHC_Library\PHDatabase\PH_DataSave.sqf";
