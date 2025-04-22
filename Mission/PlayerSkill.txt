@@ -7,14 +7,13 @@ KYLE@교관, 정식클랜원, 기본 교육, 의료 심화#
 jennet@교관, 정식클랜원, 기본 교육#
 chocoba@정식클랜원, 기본 교육, 의료 심화#
 HISBUST@정식클랜원, 입문자 교육, 기본 교육#
-DarkWing@활동대기, 입문자 교육, 기본 교육#
 luffy@정식클랜원, 기본 교육, 의료 심화#
 Lucas Springfield@정식클랜원, 기본 교육#
 KimBab@정식클랜원, 기본 교육, 입문자 교육, 의료 심화#
 Yamilu@정식클랜원, 기본 교육, 의료 심화#
 GoodNight@정식클랜원, 기본 교육#
-KyoungKyum@정식클랜원, 입문자 교육, 기본 교육#
 Moose@활동대기#
 Drago@활동대기#
 MANNY@정식클랜원, 기본 교육#
 Olive@임시클랜원, 기본 교육#
+cho_hee@임시클랜원, 기본 교육#
