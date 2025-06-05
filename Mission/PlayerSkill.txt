@@ -10,7 +10,6 @@ Starnight@정식클랜원#
 chocoba@정식클랜원, 기본 교육, 의료 심화#
 HISBUST@정식클랜원, 입문자 교육, 기본 교육#
 samryong@정식클랜원, 입문자 교육, 기본 교육, 의료 심화#
-DarkWing@#
 luffy@정식클랜원, 기본 교육, 의료 심화#
 Lucas Springfield@정식클랜원, 기본 교육#
 KimBab@정식클랜원, 기본 교육, 입문자 교육, 의료 심화#
