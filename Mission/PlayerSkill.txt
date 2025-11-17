@@ -12,6 +12,7 @@ Lucas Springfield@정식클랜원, 기본 교육#
 SILK07@정식클랜원, 기본 교육, 의료 심화#
 KimBob@정식클랜원, 입문자 교육, 기본 교육, 의료 심화#
 HOWARD@정식클랜원, 기본 교육#
+Coldcat@정식클랜원, 입문자 교육, 기본 교육#
 GoodNight@정식클랜원, 기본 교육#
 cho_hee@활동대기, 기본 교육#
 Ymont@정식클랜원#
